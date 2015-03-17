@@ -1,6 +1,5 @@
 /*
 *
-<<<<<<< HEAD
 *  HatchBot v0.02a 17/03/2015
 *  for New Zealand DOC Kākāpō Recovery program
 *  by David McGahan
@@ -12,22 +11,11 @@
 *  Attribution-NonCommercial-ShareAlike 4.0 International License. 
 *  To view a copy of this license, visit 
 *  http://creativecommons.org/licenses/by-nc-sa/4.0/.
-=======
 *
-*  HatchBot
-*  New Zealand DOC Kākāpō Recovery program
-*  David McGahan 2015
-*  @dizymac
-*  www.davidmcgahan.co.nz
-*
-*  http://en.wikipedia.org/wiki/Kakapo
-*
->>>>>>> 6d6d623e383564126b841a712bed212c58b0fab9
 *
 *
 */
 
-<<<<<<< HEAD
 // constants
 const int speaker = 8;
 
@@ -66,12 +54,4 @@ void scale() {
   for(uint16_t i=50; i<15000; i++)  {
      playTone(i,20);
   }
-=======
-void setup() {
-
-}
-
-void loop() {
-
->>>>>>> 6d6d623e383564126b841a712bed212c58b0fab9
 }
