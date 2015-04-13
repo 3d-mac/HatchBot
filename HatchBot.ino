@@ -1,8 +1,5 @@
 /*
 *
-*  HatchBot v0.02a 17/03/2015
-*  for New Zealand DOC Kākāpō Recovery program
-*  by David McGahan
 *  HatchBot v0.03a 12/04/2015
 *  for the New Zealand Department of Conservation 
 *  Kākāpō Recovery program
@@ -18,16 +15,8 @@
 *  http://creativecommons.org/licenses/by-nc-sa/4.0/.
 *
 *
-*
 */
 
-// constants
-const int speaker = 8;
-
-//variables
-int randNumber;
-int chirpCount;
-int i = 0;
 #include <LowPower.h>
 const int speakerPin = 8;
 const int motorPin = 9;
@@ -36,18 +25,14 @@ void setup() {
   pinMode(motorPin, OUTPUT);
 }
 void loop() {
-  randNumber = random(4000, 8000);
-  chirpCount = random(5);
   int randNumber = random(8000); // Define random variable time. in this case, 10 minutes or 600000ms is required.
   int chirpCount = random(5); // Define a random number of times to chirp.
   int i = 0;
   while (i < chirpCount){
     i++;
     chirp();
-    delay(randNumber);
     delay(random(4000)); // Allow a random and non-uniform time between chirps.
   }
-  delay(randNumber);    
   for (byte motorSpeed = 0; 
     motorSpeed <= 255; 
     motorSpeed +=5 
