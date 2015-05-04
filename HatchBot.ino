@@ -45,19 +45,19 @@ void loop() {
   }
   motor();
   delay(randNumber);
-  LowPower.idle(SLEEP_8S, ADC_OFF, TIMER2_OFF, TIMER1_OFF, TIMER0_OFF, SPI_OFF, USART0_OFF, TWI_OFF); // Power down mode to preserve battery until next loop starts up.
+  //LowPower.idle(SLEEP_8S, ADC_OFF, TIMER2_OFF, TIMER1_OFF, TIMER0_OFF, SPI_OFF, USART0_OFF, TWI_OFF); // Power down mode to preserve battery until next loop starts up.
 }
 
 void motor() {
-  byte speed = 50;
+  byte speed = 18;
   analogWrite(motorPin, speed);
-  byte maxSpeed = random(25, 45);
+  byte maxSpeed = random(30, 41);
     while (speed < maxSpeed) 
      { 
        analogWrite(motorPin, speed);
        {
          speed++;
-         for (int i=8; i>5; i--){
+         for (int i=8; i>6; i--){
            delay(1);
          }
        }
@@ -65,7 +65,6 @@ void motor() {
      if (speed == maxSpeed) 
      { 
        analogWrite(motorPin, 0); 
-       //delay(random(1000, 5000)); test that this uses the timing of the randNumber variable
+       delay(random(500, 5000));
      }
 }
-
